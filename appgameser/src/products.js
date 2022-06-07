@@ -1,7 +1,7 @@
 const products = [
     { 
         id: '1',
-        name: 'TENIS AIR MAX 90',
+        name: 'TENNIS AIR MAX 90',
         price: 2599,
         category: 'SNEAKERS MEN',
         img: 'https://tafmx.vteximg.com.br/arquivos/ids/342205-398-512/DJ9250-001-1.jpg?v=637805059696530000',
@@ -10,7 +10,7 @@ const products = [
     },
     { 
         id: '2',
-        name: 'TENIS ADIDAS SUPERSTAR PRIDE',
+        name: 'TENNIS ADIDAS SUPERSTAR PRIDE',
         price: 2999,
         category: 'SNEAKERS MEN',
         img: 'https://tafmx.vteximg.com.br/arquivos/ids/367433-398-512/GX6395-1.jpg?v=637897779579800000',
@@ -19,12 +19,12 @@ const products = [
     },
     { 
         id: '3',
-        name: 'TENIS ADIDAS GRAND COURT ALPHA',
+        name: 'TENNIS ADIDAS GRAND COURT ALPHA',
         price: 1699,
         category: 'SNEAKERS MEN',
         img: 'https://tafmx.vteximg.com.br/arquivos/ids/350531-398-512/GY8029-1.jpg?v=637840857219330000',
         stock: 8,
-        description: 'TENIS ADIDAS GRAND COURT ALPHA | SNEAKERS | MEN´S',
+        description: 'TENNIS ADIDAS GRAND COURT ALPHA | SNEAKERS | MEN´S',
     }
 ]
 

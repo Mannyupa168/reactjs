@@ -2,7 +2,7 @@ import './ItemListContainer.css';
 import ItemList from '../ItemList/ItemList.js'
 import {useEffect} from 'react'
 import useState from 'react'
-import {getProducts} from '../ItemList/products.js'
+import {getProducts} from '../../products.js'
 
 const ItemListContainer = (props) => {
 
@@ -16,22 +16,12 @@ const ItemListContainer = (props) => {
         })
     }, [])
 
-    const productsComponents = products.map(product => {
-        return (
-            <li key={product.id}>
-                {product.name}
-            </li>
-        )
-    })
-
     return (
         <section>
             <div>
                 <h1>{label}</h1>
             </div>
-            <ul>
-                {productsComponents}
-            </ul>
+            <ItemList product={products}/>
         </section>
     )
 }
