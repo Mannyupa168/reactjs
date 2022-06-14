@@ -1,9 +1,20 @@
-const Item = ({ img, name, price, }) => {
+const Item = ({ img, name, price }) => {
     return(
-            <li>
-                <img src={img} alt='{name}'/>
-                {name} 
-            </li>
+        <div className="container">
+            <div className="item">
+                <div className="productImg">
+                    <img src={img} alt='{name}'/>
+                </div>
+                <div className="productInfo">
+                    <li>
+                        {name} 
+                    </li>
+                    <li>
+                        $ {price}
+                    </li>
+                </div>
+            </div>
+        </div>
     )
 }
 

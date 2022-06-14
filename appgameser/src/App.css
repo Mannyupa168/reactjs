@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+* {
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+  }
+
 .App {
   text-align: center;
 }
@@ -44,4 +58,26 @@
   flex-wrap: wrap;
   width: 15%;
   align-self: center;
+}
+
+.container{
+  display: flex;
+  align-items: space-between;
+  justify-content: center;
+  padding: 24px 0;
+  list-style: none;
+  text-align: center;
+  width: 100%;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.item{
+  background-color: #151c37;
+  color: #fff;
+  width: 50%;
+  border-radius: 10px;
+}
+
+.productImg{
+  width: 100%;
 }

@@ -1,5 +1,5 @@
 import './App.css';
-// import NavBar from './components/NavBar/NavBar';
+import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
           Learn React
         </a>
       </header> */}
-      {/* <NavBar /> */}
+      <NavBar />
       {<ItemListContainer label = 'Welcome to OMG - Shoes!' />}
     </div>
   );
