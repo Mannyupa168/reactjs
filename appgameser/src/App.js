@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import NavBar from './components/NavBar/NavBar';
+// import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 function App() {
@@ -20,8 +19,8 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <NavBar />
-      <ItemListContainer label = 'Welcome to OMG - Shoes!' />
+      {/* <NavBar /> */}
+      {<ItemListContainer label = 'Welcome to OMG - Shoes!' />}
     </div>
   );
 }

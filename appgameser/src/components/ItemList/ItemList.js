@@ -1,6 +1,6 @@
-import Item from './Item/Item.js';
+import Item from '../Item/Item.js';
 
-const ItemList = ({products}) => {
+const ItemList = ({ products }) => {
 
     return (
         <ul>
