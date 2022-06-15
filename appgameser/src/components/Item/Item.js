@@ -15,7 +15,7 @@ const Item = ({ id, img, name, price }) => {
                         $ {price}
                     </li>
                 </div>
-                <div>
+                <div className="detailsBtn">
                     <Link to = {`/detail/${id}`} className="option">Ver detalle</Link>
                 </div>
             </div>

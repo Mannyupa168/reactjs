@@ -48,3 +48,15 @@
   .header .navbar a:hover {
     color: #fff;
   }
+
+  .Active{
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .Inactive{
+    font-size: 1.7rem;
+    font-weight: 300;
+    color: #C7C7C7;
+  }

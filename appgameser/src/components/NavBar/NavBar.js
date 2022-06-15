@@ -3,7 +3,7 @@ import './NavBar.css';
 // import search from './img/search.png'
 // import user from './img/user.png';
 // import cart from './img/shopping-cart.png';
-import { Link } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 
 const NavBar = () => { 
 
@@ -35,7 +35,7 @@ const NavBar = () => {
 
             
             <nav className="navbar">
-               <Link to = '/category/sneakers' >Sneakers</Link>
+               <NavLink to = '/category/sneakers' className = {( { isActive } ) => isActive ? 'Active' : 'Inactive'}>Sneakers</NavLink>
                <Link to = '/category/clothes'>Clothes</Link>
                <Link to = '/category/accessories'>Accessories</Link>
                <Link to = '/category/sneaker-care'>Sneaker Care</Link>

@@ -10,7 +10,7 @@ const products = [
     },
     { 
         id: '2',
-        name: 'SNEAKER CARE CREP PROTECT - ERASE',
+        name: 'SNEAKER CARE CREP PROTECT',
         price: 269.00,
         category: 'sneaker-care',
         img: 'https://tafmx.vteximg.com.br/arquivos/ids/227373-398-512/4016109000-001-1.png?v=637417466935800000',

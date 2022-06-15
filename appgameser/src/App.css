@@ -72,12 +72,30 @@
 }
 
 .item{
+  list-style: none;
   background-color: #151c37;
   color: #fff;
   width: 50%;
-  border-radius: 10px;
+  height: 105%;
+  border-radius: 15px;
 }
 
-.productImg{
-  width: 100%;
+.item img{
+  width: 225px;
+}
+
+.productInfo li{
+  list-style: none;
+  padding: 8px;
+}
+
+.detailsBtn{
+  text-decoration: none;
+  text-decoration-style: none;
+  background-color: #C7C7C7;
+  margin: 10px 45px;
+  padding: 8px;
+  border-radius: 15px;
+  color: inherit;
+
 }
