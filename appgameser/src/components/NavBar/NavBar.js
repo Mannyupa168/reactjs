@@ -3,6 +3,7 @@ import './NavBar.css';
 // import search from './img/search.png'
 // import user from './img/user.png';
 // import cart from './img/shopping-cart.png';
+import { Link } from 'react-router-dom'
 
 const NavBar = () => { 
 
@@ -11,7 +12,9 @@ const NavBar = () => {
             <div className="logo">
                    
                 <div className="titleLogo">
-                    O M G - S h o e s
+                    <Link to="/">
+                        O M G - S h o e s
+                    </Link>
                 </div>
                 
 
@@ -32,11 +35,11 @@ const NavBar = () => {
 
             
             <nav className="navbar">
-               <a href="/">Sneakers</a>
-               <a href="/">Clothes</a>
-               <a href="/">Accessories</a>
-               <a href="/">Sneaker Care</a>
-               <a href="/">Brands</a>
+               <Link to = '/category/sneakers' >Sneakers</Link>
+               <Link to = '/category/clothes'>Clothes</Link>
+               <Link to = '/category/accessories'>Accessories</Link>
+               <Link to = '/category/sneaker-care'>Sneaker Care</Link>
+               <Link to = '/category/brands'>Brands</Link>
             </nav>
         </header>
     )
