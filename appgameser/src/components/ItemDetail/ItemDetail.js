@@ -1,14 +1,18 @@
 import Counter from '../Counter/Counter'
-import { useContext } from 'react'
-import { Context } from '../../App'
+import { useState, useContext } from 'react'
+import { Link } from 'react-router-dom'
+import CartContext from '../../context/CartContext'
 
 const ItemDetail = ({ id, name, img, stock, price }) => {
 
-    const { cart, setCart} = useContext(Context)
+    const [productAdded, setProductsAdded] = useState(0)
+
+    const { addItem } = useContext(CartContext)
 
     const handleOnAdd = (quantity) => {
         console.log(`Se agregaron  ${quantity} ${name}`)
-        setCart([...cart, {id, name, price, quantity}])
+        addItem ({id, name, price, quantity})
+        setProductsAdded(quantity)
     }
 
     return(
@@ -22,7 +26,10 @@ const ItemDetail = ({ id, name, img, stock, price }) => {
                     {name}
                 </div>
 
-                <Counter onAdd = {handleOnAdd} stock = {stock} />
+                { productAdded === 0 
+                    ? <Counter onAdd = {handleOnAdd} stock = {stock} />
+                    : <Link to='/cart'> Finalizar Compra </Link>
+                }
                 {/* <InputCount onAdd = {handleOnAdd} /> */}
             </div>
         </div>
