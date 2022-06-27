@@ -21,12 +21,7 @@
     padding: 2rem 2%;
     background: #151c37;
     text-decoration: none ;
-  }
-
-  img{
-      width: 50px;
-      padding-right: 10px;
-      margin-bottom: 12px;
+    list-style: none;
   }
 
   .titleLogo{
@@ -60,3 +55,10 @@
     font-weight: 300;
     color: #C7C7C7;
   }
+
+  .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+

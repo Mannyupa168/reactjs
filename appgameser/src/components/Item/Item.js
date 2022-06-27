@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 
 const Item = ({ id, img, name, price }) => {
+
     return(
         <article className="container">
             <div className="item">

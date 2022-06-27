@@ -51,6 +51,11 @@
   }
 }
 
+.cartWidget{
+  color: #fff;
+  align-self: flex-end;
+}
+
 .iconsContainer {
   display: flex;
   justify-content: space-between;

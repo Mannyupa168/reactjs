@@ -34,6 +34,24 @@ const products = [
         img: 'https://tafmx.vteximg.com.br/arquivos/ids/355621-398-512/02389501-1.jpg?v=637842829018930000',
         stock: 12,
         description: 'GORRA PUMA BATMAN BB CAP | GORRAS Y VISERAS | ACCESORIOS',
+    }, 
+    { 
+        id: '5',
+        name: 'TENIS ADIDAS U NIZZA HI TRACEABLE ICONS',
+        price: 2049.00,
+        category: 'sneakers',
+        img: 'https://tafmx.vteximg.com.br/arquivos/ids/367651-398-512/GV7607-1.jpg?v=637901491138870000',
+        stock: 12,
+        description: 'ADIDAS U NIZZA HI TRACEABLE ICONS | SNEAKERS | UNISEX',
+    }, 
+    { 
+        id: '6',
+        name: 'TENIS ADIDAS U NIZZA HI TRACEABLE ICONS',
+        price: 2049.00,
+        category: 'sneakers',
+        img: 'https://tafmx.vteximg.com.br/arquivos/ids/367651-398-512/GV7607-1.jpg?v=637901491138870000',
+        stock: 10,
+        description: 'ADIDAS U NIZZA HI TRACEABLE ICONS | SNEAKERS | UNISEX',
     }
 ]
 
