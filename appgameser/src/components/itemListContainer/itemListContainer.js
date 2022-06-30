@@ -3,6 +3,8 @@ import { getProducts, getCategoryByProducts } from '../../products.js'
 import { useState, useEffect } from 'react'
 import ItemList from '../ItemList/ItemList.js'
 import { useParams } from 'react-router-dom'
+import { getDocs, collection } from 'firebase/firestore'
+import { db } from '../../services/firebase/index'
 
 
 const ItemListContainer = (props) => {
@@ -15,23 +17,34 @@ const ItemListContainer = (props) => {
     useEffect(() => {
         setLoading(true)
 
-        if(!categoryId){
-            getProducts().then(response => {
-                setProducts(response) 
-            } ).catch(error => {
-                console.log(error)
-            }).finally(() => {
-                setLoading(false)
+        getDocs(collection(db, 'products')).then(response => {
+            const products = response.products.docs.map(doc => {
+                return { id: doc.id, ...doc.data()}
             })
-        }else{
-            getCategoryByProducts(categoryId).then(response => {
-                setProducts(response)
-            }).catch(error => {
-                console.log(error)
-            }).finally(() => {
-                setLoading(false)
-            })
-        }
+            setProducts(products)
+        }).catch(error => {
+            console.log(error)
+        }).finally(() => {
+            setLoading(false)
+        })
+
+        // if(!categoryId){
+        //     getProducts().then(response => {
+        //         setProducts(response) 
+        //     } ).catch(error => {
+        //         console.log(error)
+        //     }).finally(() => {
+        //         setLoading(false)
+        //     })
+        // }else{
+        //     getCategoryByProducts(categoryId).then(response => {
+        //         setProducts(response)
+        //     }).catch(error => {
+        //         console.log(error)
+        //     }).finally(() => {
+        //         setLoading(false)
+        //     })
+        // }
     }, [categoryId])
 
     if(loading){
