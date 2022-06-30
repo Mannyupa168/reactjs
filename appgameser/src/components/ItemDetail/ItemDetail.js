@@ -2,6 +2,7 @@ import Counter from '../Counter/Counter'
 import { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import CartContext from '../../context/CartContext'
+import NoticeContext from '../../notification/Notification'
 
 const ItemDetail = ({ id, name, img, stock, price }) => {
 
@@ -9,8 +10,10 @@ const ItemDetail = ({ id, name, img, stock, price }) => {
 
     const { addItem } = useContext(CartContext)
 
+    const setNotice = useContext(NoticeContext)
+
     const handleOnAdd = (quantity) => {
-        console.log(`Se agregaron  ${quantity} ${name}`)
+        console.log('success', `Added  ${quantity} ${name}`)
         addItem ({id, name, price, quantity})
         setProductsAdded(quantity)
     }
