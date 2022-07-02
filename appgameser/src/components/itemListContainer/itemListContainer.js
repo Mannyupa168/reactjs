@@ -3,7 +3,7 @@ import { getProducts, getCategoryByProducts } from '../../products.js'
 import { useState, useEffect } from 'react'
 import ItemList from '../ItemList/ItemList.js'
 import { useParams } from 'react-router-dom'
-import { getDocs, collection } from 'firebase/firestore'
+import { getDocs, collection, query, where } from 'firebase/firestore'
 import { db } from '../../services/firebase/index'
 
 
@@ -14,10 +14,14 @@ const ItemListContainer = (props) => {
 
     const { categoryId } = useParams()
 
+    const collectionRef = categoryId 
+    ? (query(collection(db, 'products'), where('category', '==', categoryId))) 
+    : (collection(db, 'products'))
+
     useEffect(() => {
         setLoading(true)
 
-        getDocs(collection(db, 'products')).then(response => {
+        getDocs(collectionRef).then(response => {
             const products = response.products.docs.map(doc => {
                 return { id: doc.id, ...doc.data()}
             })
