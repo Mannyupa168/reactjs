@@ -24,7 +24,7 @@ const CartItem = ({id, name, quantity, price}) => {
             </section>
             <footer>
                 <p>
-                    Subtotal:${price*quantity}
+                    Subtotal:${ price * quantity}
                 </p>
                 <button onClick={() => handleRemove (id) }> X </button>
             </footer>
