@@ -22,7 +22,7 @@ const ItemListContainer = (props) => {
         setLoading(true)
 
         getDocs(collectionRef).then(response => {
-            const products = response.products.docs.map(doc => {
+            const products = response.docs.map(doc => {
                 return { id: doc.id, ...doc.data()}
             })
             setProducts(products)
